@@ -1,0 +1,73 @@
+schema_version: "1.0"
+reviewed_on: "2026-11-21"
+scenarios:
+  - id: personal-event-automation
+    required_semantics:
+      state_unit: event
+      duplicate_handling: required
+      external_effect: user-confirmed task creation
+      approval_binding: exact target and fields
+      credential_scope: one synthetic mailbox and task fixture
+      portability: export flow and connection references
+    candidates: [Activepieces, Node-RED]
+    evaluation_state: NOT_EVALUATED
+  - id: internal-script-approval
+    required_semantics:
+      state_unit: request and reviewed script run
+      duplicate_handling: idempotency key
+      external_effect: stubbed internal API write
+      approval_binding: exact generated diff and request
+      credential_scope: short-lived fake token
+      portability: script, inputs, dependencies, and audit record
+    candidates: [Windmill]
+    evaluation_state: NOT_EVALUATED
+  - id: scheduled-data-pipeline
+    required_semantics:
+      state_unit: partitioned DAG or workflow run
+      duplicate_handling: partition identity
+      external_effect: atomic synthetic table publish
+      approval_binding: data-quality evidence
+      credential_scope: fixture dataset only
+      portability: code/config and schedule
+    candidates: [Kestra, Airflow]
+    evaluation_state: NOT_EVALUATED
+  - id: durable-business-process
+    required_semantics:
+      state_unit: durable process history
+      duplicate_handling: idempotent activities
+      external_effect: compensatable synthetic payment fixture
+      approval_binding: exact effect after wait
+      credential_scope: fake payment identity
+      portability: history, code, and migration plan
+    candidates: [Temporal, Prefect]
+    evaluation_state: NOT_EVALUATED
+  - id: model-tool-application
+    required_semantics:
+      state_unit: versioned model/tool flow
+      duplicate_handling: bounded tool invocation
+      external_effect: read-only fixture tool and draft
+      approval_binding: human accepts validated draft
+      credential_scope: fake provider/tool credentials
+      portability: prompts, graph, schemas, and model config
+    candidates: [Langflow, Flowise]
+    evaluation_state: NOT_EVALUATED
+  - id: multi-agent-collaboration
+    required_semantics:
+      state_unit: bounded agent conversation plus artifact record
+      duplicate_handling: deterministic artifact IDs
+      external_effect: none; proposal only
+      approval_binding: independent validator and human
+      credential_scope: read-only fixture tools
+      portability: roles, messages, artifacts, termination, budget
+    candidates: [AutoGen]
+    evaluation_state: NOT_EVALUATED
+failure_injections:
+  - duplicate-trigger
+  - worker-crash-before-acknowledgment
+  - timeout-after-effect
+  - malicious-untrusted-input
+  - secret-canary-in-error
+  - approval-parameter-change
+  - upgrade-with-inflight-run
+  - telemetry-outage
+publication_authorized: false

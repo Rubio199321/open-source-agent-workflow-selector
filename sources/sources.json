@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0",
+  "repository": "open-source-agent-workflow-selector",
+  "reviewed_on": "2026-11-21",
+  "language": "en",
+  "policy": "Each source supports only the narrow claim_scope. Cross-project architecture, gates, thresholds, and selection guidance are author recommendations requiring local validation. URL reachability is transport evidence only.",
+  "sources": [
+    {
+      "name": "Activepieces",
+      "url": "https://www.activepieces.com/docs/install/overview/",
+      "type": "official upstream product or framework documentation",
+      "authority": "named upstream project, standards body, publisher, or official documentation owner",
+      "version_or_date": "moving upstream unless the URL pins a version; reviewed 2026-11-21",
+      "claim_scope": "installation and automation-platform role",
+      "does_not_support": "This source alone does not validate the authored pipeline, interoperability, local performance, safety, legality, or fitness for a particular deployment."
+    },
+    {
+      "name": "Node-RED",
+      "url": "https://nodered.org/docs/user-guide/",
+      "type": "official upstream product or framework documentation",
+      "authority": "named upstream project, standards body, publisher, or official documentation owner",
+      "version_or_date": "moving upstream unless the URL pins a version; reviewed 2026-11-21",
+      "claim_scope": "event/flow user-guide role",
+      "does_not_support": "This source alone does not validate the authored pipeline, interoperability, local performance, safety, legality, or fitness for a particular deployment."
+    },
+    {
+      "name": "Windmill",
+      "url": "https://www.windmill.dev/docs/intro",
+      "type": "official upstream product or framework documentation",
+      "authority": "named upstream project, standards body, publisher, or official documentation owner",
+      "version_or_date": "moving upstream unless the URL pins a version; reviewed 2026-11-21",
+      "claim_scope": "script and workflow platform role",
+      "does_not_support": "This source alone does not validate the authored pipeline, interoperability, local performance, safety, legality, or fitness for a particular deployment."
+    },
+    {
+      "name": "Kestra",
+      "url": "https://kestra.io/docs/workflow-components",
+      "type": "official upstream product or framework documentation",
+      "authority": "named upstream project, standards body, publisher, or official documentation owner",
+      "version_or_date": "moving upstream unless the URL pins a version; reviewed 2026-11-21",
+      "claim_scope": "workflow-component model",
+      "does_not_support": "This source alone does not validate the authored pipeline, interoperability, local performance, safety, legality, or fitness for a particular deployment."
+    },
+    {
+      "name": "Airflow",
+      "url": "https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/overview.html",
+      "type": "official upstream product or framework documentation",
+      "authority": "named upstream project, standards body, publisher, or official documentation owner",
+      "version_or_date": "moving upstream unless the URL pins a version; reviewed 2026-11-21",
+      "claim_scope": "DAG and core execution concepts",
+      "does_not_support": "This source alone does not validate the authored pipeline, interoperability, local performance, safety, legality, or fitness for a particular deployment."
+    },
+    {
+      "name": "Temporal",
+      "url": "https://docs.temporal.io/workflow-execution",
+      "type": "official upstream product or framework documentation",
+      "authority": "named upstream project, standards body, publisher, or official documentation owner",
+      "version_or_date": "moving upstream unless the URL pins a version; reviewed 2026-11-21",
+      "claim_scope": "durable workflow-execution concepts",
+      "does_not_support": "This source alone does not validate the authored pipeline, interoperability, local performance, safety, legality, or fitness for a particular deployment."
+    },
+    {
+      "name": "Prefect",
+      "url": "https://docs.prefect.io/v3/concepts/flows",
+      "type": "official upstream product or framework documentation",
+      "authority": "named upstream project, standards body, publisher, or official documentation owner",
+      "version_or_date": "moving upstream unless the URL pins a version; reviewed 2026-11-21",
+      "claim_scope": "flow concepts",
+      "does_not_support": "This source alone does not validate the authored pipeline, interoperability, local performance, safety, legality, or fitness for a particular deployment."
+    },
+    {
+      "name": "Langflow",
+      "url": "https://docs.langflow.org/",
+      "type": "official upstream product or framework documentation",
+      "authority": "named upstream project, standards body, publisher, or official documentation owner",
+      "version_or_date": "moving upstream unless the URL pins a version; reviewed 2026-11-21",
+      "claim_scope": "visual AI-flow role",
+      "does_not_support": "This source alone does not validate the authored pipeline, interoperability, local performance, safety, legality, or fitness for a particular deployment."
+    },
+    {
+      "name": "Flowise",
+      "url": "https://docs.flowiseai.com/",
+      "type": "official upstream product or framework documentation",
+      "authority": "named upstream project, standards body, publisher, or official documentation owner",
+      "version_or_date": "moving upstream unless the URL pins a version; reviewed 2026-11-21",
+      "claim_scope": "visual AI-flow role",
+      "does_not_support": "This source alone does not validate the authored pipeline, interoperability, local performance, safety, legality, or fitness for a particular deployment."
+    },
+    {
+      "name": "AutoGen",
+      "url": "https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/index.html",
+      "type": "official upstream product or framework documentation",
+      "authority": "named upstream project, standards body, publisher, or official documentation owner",
+      "version_or_date": "moving upstream unless the URL pins a version; reviewed 2026-11-21",
+      "claim_scope": "agent-conversation framework role",
+      "does_not_support": "This source alone does not validate the authored pipeline, interoperability, local performance, safety, legality, or fitness for a particular deployment."
+    }
+  ]
+}
