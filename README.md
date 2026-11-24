@@ -1,5 +1,10 @@
 # Choosing an Open-Source Workflow or Agent Orchestrator
 
+
+> **Decision:** Use this selector when choosing among event wiring, visual integration, script runners, scheduled DAGs, durable workflows, and AI-agent orchestration; skip it if connector count or screenshots are your only criteria.
+>
+> **For:** automation architects, AI platform teams, and operations engineers  ·  **Not for:** teams without a defined state, failure, approval, identity, or exit model
+
 “Workflow automation” covers systems that do fundamentally different jobs: event-driven wiring, human-friendly visual integration, script execution, scheduled data DAGs, durable business processes, and conversations among AI agents. Comparing them by connector count or screenshot quality produces bad decisions.
 
 This guide starts with six workload scenarios. For each one, specify the state, failure, approval, identity, portability, and recovery contract before looking at a project. The included [`decision-scenarios.yaml`](assets/decision-scenarios.yaml) is the main artifact; its states begin as `NOT_EVALUATED`.
@@ -115,6 +120,14 @@ The ten records in [`sources/sources.json`](sources/sources.json) are precise of
 
 Re-evaluate when edition/license, version, connector, worker model, state backend, identity provider, secret path, retry policy, model/tool, approval mechanism, or deployment topology changes. Preserve failed scenario evidence. Never replace a failure with a rerun without linking both.
 
+## Adjacent guides
+
+- [agent-rules-portability-guide](https://github.com/Probstpp1/agent-rules-portability-guide) — Use it when selected agent products must consume consistent repository rules through reviewed adapters.
+- [agent-execution-control-sandbox](https://github.com/MargaritaOfficial/agent-execution-control-sandbox) — Use it when orchestrated agents execute code, browse, or process data across a security boundary.
+- [agent-observability-field-guide](https://github.com/duthdoll45/agent-observability-field-guide) — Use it when workflow and agent decisions need a trace model that survives tool changes.
+
 ## License
 
 Original selector and scenario artifact: CC BY 4.0. Linked projects and documentation retain their own terms.
+
+If this saved you a decision, star the repo — it is how the next reader finds it.
